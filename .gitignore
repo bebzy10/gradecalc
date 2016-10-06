@@ -1,0 +1,67 @@
+// Homework # 1: Program "Course Grade Estimator"
+//Author: Aleksandra Vojvodic
+//Email: avojvodic@g.ucla.edu
+//Course: PIC 10A Section 5 Fall 2016
+//Honesty Pledge:
+// I, Aleksandra Vojvodic, pledge that this is my independent work and abide by the guidelines of honesty
+// outlined in the syllabus.
+// User inputs: scores for hmw, exams, and desired overall grade
+// Output: final grade % to obtain desired grade %
+//List of known bugs: none
+
+
+#include <iostream>
+
+using namespace std;
+
+int
+main()
+{
+    double hgrade, e1grade, e2grade, dgrade;
+    double total; // hgrade, e1grade, e2grade, dgrade;
+    double final_exam_grade; // hgrade, e1grade, e2grade, dgrade, final_grade;
+    const double HW = 0.2;
+    const double EX = 0.25;
+    const double FEX = 0.3;
+    
+    cout << "WELCOME TO PIC10A SECTION 5 !!" << endl << endl;
+    
+    cout << "// Initializing Grade Calculator \\\\" << endl << endl;
+    
+    cout << "Type your Homework grade (%) = ";
+    cin >> hgrade;
+    cout << endl;
+    
+    total = (hgrade * HW);
+
+    cout << "Type your Exam I grade (%) = ";
+    cin >> e1grade;
+    cout << endl;
+    
+    total = (hgrade * HW) + (e1grade * EX);
+
+    cout << "Type your Exam II grade (%) = ";
+    cin >> e2grade;
+    cout << endl;
+    
+    total = (hgrade * HW) + (e1grade * EX) + (e2grade * EX);
+    
+    cout << "Type your desired grade (%) = ";
+    cin>> dgrade;
+    cout << endl;
+
+    total = (hgrade * HW) + (e1grade * EX) + (e2grade * EX);
+    
+    final_exam_grade = (dgrade - total) / (FEX);
+    
+    cout << "To get your desired grade of \"" << dgrade << " %\", you would need a score of " << final_exam_grade << " % in the final." << endl << endl;
+   
+    cout << "Do you think it's possible?" << endl << endl;
+    
+    cout << "\\\\ Ending Grade Calculator //" << endl;
+    
+    return 0;
+
+}
+
+
